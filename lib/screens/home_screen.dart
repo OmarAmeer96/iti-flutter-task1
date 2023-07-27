@@ -123,6 +123,7 @@ class HomeScreen extends StatelessWidget {
                   price: "\$1.865",
                   color: Color(0xfffed52b),
                   imagePath: "assets/images/image1.png",
+                  width: 37,
                 ),
                 SizedBox(
                   height: 27,
@@ -133,6 +134,7 @@ class HomeScreen extends StatelessWidget {
                   price: "\$1.901",
                   color: Color(0xff04d9c2),
                   imagePath: "assets/images/image2.png",
+                  width: 38,
                 ),
                 SizedBox(
                   height: 27,
@@ -143,6 +145,7 @@ class HomeScreen extends StatelessWidget {
                   price: "\$1.987",
                   color: Color(0xff009ea1),
                   imagePath: "assets/images/image3.png",
+                  width: 47,
                 ),
               ],
             ),

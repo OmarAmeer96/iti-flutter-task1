@@ -10,13 +10,15 @@ class CustomWidget2 extends StatelessWidget {
       required this.shipping,
       required this.price,
       required this.color,
-      required this.imagePath});
+      required this.imagePath,
+      required this.width});
 
   final String imagePath;
   final String text1;
   final String shipping;
   final String price;
   final Color color;
+  final double width;
 
   @override
   Widget build(BuildContext context) {
@@ -32,12 +34,23 @@ class CustomWidget2 extends StatelessWidget {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              text1,
-              style: const TextStyle(
-                fontSize: 20,
-                fontFamily: "Montserrat-SemiBold",
-              ),
+            Row(
+              children: [
+                Text(
+                  text1,
+                  style: const TextStyle(
+                    fontSize: 20,
+                    fontFamily: "Montserrat-SemiBold",
+                  ),
+                ),
+                SizedBox(
+                  width: width,
+                ),
+                const Icon(
+                  CupertinoIcons.list_bullet,
+                  color: Color(0xffc3cbd2),
+                ),
+              ],
             ),
             const SizedBox(
               height: 7,
