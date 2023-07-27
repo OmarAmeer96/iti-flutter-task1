@@ -15,9 +15,9 @@ class CustomRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        const Text(
-          'Price Monitor',
-          style: TextStyle(
+        Text(
+          text1,
+          style: const TextStyle(
             fontSize: 24,
             fontWeight: FontWeight.bold,
             fontFamily: 'Montserrat-Bold',
@@ -32,9 +32,9 @@ class CustomRow extends StatelessWidget {
         const SizedBox(
           width: 5,
         ),
-        const Text(
-          'Search',
-          style: TextStyle(
+        Text(
+          text2,
+          style: const TextStyle(
             color: Color(0xffc3cbd2),
             fontSize: 24,
             fontWeight: FontWeight.bold,

@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:iti_flutter_task1/widgets/custom_cliprrect.dart';
 import 'package:iti_flutter_task1/widgets/custom_container.dart';
 import 'package:iti_flutter_task1/widgets/custom_row.dart';
+import 'package:iti_flutter_task1/widgets/custom_widget2.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -14,40 +16,40 @@ class HomeScreen extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: const Color(0xff01dbc0),
         ),
-        body: Padding(
-          padding: const EdgeInsets.all(30.0),
+        body: const Padding(
+          padding: EdgeInsets.all(30.0),
           child: SingleChildScrollView(
             child: Column(
               children: [
-                const CustomRow(
+                CustomRow(
                   text1: "Price Monitor",
                   icon: Icons.search_rounded,
                   text2: "Search",
                 ),
-                const SizedBox(
+                SizedBox(
                   height: 25,
                 ),
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(20.0),
-                      child: Image.asset(
-                        "assets/images/camera.png",
-                        width: 130,
-                        height: 130,
-                      ),
+                    CustomCliprrect(
+                      imagePath: "assets/images/camera.png",
                     ),
-                    const SizedBox(
+                    SizedBox(
                       width: 35,
                     ),
-                    const Column(
+                    Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
                           'Photo Camera',
                           style: TextStyle(
-                              fontSize: 20, fontFamily: "Montserrat-SemiBold"),
+                            fontSize: 20,
+                            fontFamily: "Montserrat-SemiBold",
+                          ),
+                        ),
+                        SizedBox(
+                          height: 4,
                         ),
                         Row(
                           children: [
@@ -55,7 +57,7 @@ class HomeScreen extends StatelessWidget {
                               "Features",
                               style: TextStyle(
                                 fontFamily: "Montserrat-SemiBold",
-                                fontSize: 16,
+                                fontSize: 18,
                                 color: Color(0xffc3cbd2),
                               ),
                             ),
@@ -69,7 +71,7 @@ class HomeScreen extends StatelessWidget {
                           ],
                         ),
                         SizedBox(
-                          height: 14,
+                          height: 10,
                         ),
                         Row(
                           children: [
@@ -104,14 +106,44 @@ class HomeScreen extends StatelessWidget {
                     )
                   ],
                 ),
-                const SizedBox(
+                SizedBox(
                   height: 25,
                 ),
-                const CustomRow(
+                CustomRow(
                   text1: 'Shops',
                   text2: 'Best Price',
                   icon: Icons.arrow_drop_down_sharp,
-                )
+                ),
+                SizedBox(
+                  height: 25,
+                ),
+                CustomWidget2(
+                  text1: "Lorem Shop",
+                  shipping: "Free",
+                  price: "\$1.865",
+                  color: Color(0xfffed52b),
+                  imagePath: "assets/images/image1.png",
+                ),
+                SizedBox(
+                  height: 27,
+                ),
+                CustomWidget2(
+                  text1: "Ipsum Shop",
+                  shipping: "\$3.6",
+                  price: "\$1.901",
+                  color: Color(0xff04d9c2),
+                  imagePath: "assets/images/image2.png",
+                ),
+                SizedBox(
+                  height: 27,
+                ),
+                CustomWidget2(
+                  text1: "Dolor Shop",
+                  shipping: "Free",
+                  price: "\$1.987",
+                  color: Color(0xff009ea1),
+                  imagePath: "assets/images/image3.png",
+                ),
               ],
             ),
           ),
